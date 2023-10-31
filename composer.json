@@ -1,0 +1,17 @@
+{
+    "name": "sergiodanilojr/asaas-sdk",
+    "description": "Integração com o Gateway de Pagamento Asaas",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Asaas\\": "src/"
+        }
+    },
+    "require": {
+       "php": "^8.1",
+        "saloonphp/saloon": "^3.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
+    }
+}
