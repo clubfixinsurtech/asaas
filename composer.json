@@ -1,5 +1,5 @@
 {
-    "name": "sergiodanilojr/asaas-sdk",
+    "name": "clubfixinsurtech/asaas",
     "description": "Integração com o Gateway de Pagamento Asaas",
     "minimum-stability": "dev",
     "autoload": {
