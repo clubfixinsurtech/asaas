@@ -6,7 +6,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 // SETUP
 
-$asaasKey = '$aact_YTU5YTE0M2M2N2I4MTliNzk0YTI5N2U5MzdjNWZmNDQ6OjAwMDAwMDAwMDAwMDAwMzkxNDY6OiRhYWNoXzgxMTk2NDg4LTU4YmItNGY2ZC1hNGY2LTU1ZWMzNTE4ZDQ1Zg==';
+$asaasKey = 'YOUR_KEY_HERE';
 
 $connector = new \Asaas\AsaasConnector($asaasKey, false);
 
