@@ -2,10 +2,12 @@
 
 namespace Asaas\Requests\Payments;
 
+use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
 class PixQRCode extends Request
 {
+    protected Method $method = Method::GET;
 
     public function __construct(
         private string $paymentId,
