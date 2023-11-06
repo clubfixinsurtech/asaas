@@ -39,8 +39,8 @@ $payment = (new \Asaas\Entities\Payment(
     customer: $customerId,
     value: 12.5,
     dueDate: $dueDate,
-    billingType: \Asaas\Enums\BillingType::PIX,
-    description: 'Pagamento Teste'
+    billingType: \Asaas\Enums\BillingType::BOLETO,
+    description: 'Pagamento Teste no Boleto'
 ));
 
 $request = new \Asaas\Requests\Payments\Create($payment);
@@ -48,13 +48,15 @@ $response = $connector->send($request);
 
 $paymentId = $response->json('id');
 
-$qrCodeRequest = new \Asaas\Requests\Payments\PixQRCode($paymentId);
-$responsePix = $connector->send($qrCodeRequest);
+//$qrCodeRequest = new \Asaas\Requests\Payments\PixQRCode($paymentId);
+//$responsePix = $connector->send($qrCodeRequest);
 
-
+$slipRequest = new \Asaas\Requests\Payments\SlipBarCode($paymentId);
+$responseSlip = $connector->send($slipRequest);
 
 dd(
-    $responsePix->json(),
+    // $responsePix->json(),
+    $responseSlip->json(),
     $response->status(),
     $response->clientError(),
     $response->json(),
