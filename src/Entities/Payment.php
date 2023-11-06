@@ -10,10 +10,11 @@ use Asaas\Helpers\ReflectionalProperties;
 use Asaas\Helpers\RequiredFields;
 use Asaas\Helpers\Validator;
 use Asaas\Traits\ConditionableTrait;
+use \Asaas\Traits\HasPayload as HasPayloadTrait;
 
 class Payment implements HasPayload
 {
-    use ConditionableTrait;
+    use ConditionableTrait, HasPayloadTrait;
 
     private array $requireds = [
         'customer',
